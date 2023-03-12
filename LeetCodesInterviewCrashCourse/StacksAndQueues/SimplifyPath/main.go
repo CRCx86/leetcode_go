@@ -6,12 +6,12 @@ import (
 )
 
 func main() {
-	//fmt.Println(simplifyPath("/home/"))
-	//fmt.Println(simplifyPath("/../"))
-	//fmt.Println(simplifyPath("/home//foo/"))
-	//fmt.Println(simplifyPath("/a/./b/../../c/"))
-	//fmt.Println(simplifyPath("/a//b////c/d//././/.."))
-	//fmt.Println(simplifyPath("/..."))
+	fmt.Println(simplifyPath("/home/"))
+	fmt.Println(simplifyPath("/../"))
+	fmt.Println(simplifyPath("/home//foo/"))
+	fmt.Println(simplifyPath("/a/./b/../../c/"))
+	fmt.Println(simplifyPath("/a//b////c/d//././/.."))
+	fmt.Println(simplifyPath("/..."))
 
 	fmt.Println(simplifyPath2("/home/"))
 	fmt.Println(simplifyPath2("/../"))
