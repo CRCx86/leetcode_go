@@ -27,30 +27,22 @@ func removeNthFromEnd(head *SingleLinkedList.ListNode, n int) *SingleLinkedList.
 
 	fast := head
 	slow := head
-	pre := head
 
-	m := 0
-	k := 0
+	for i := 0; i < n; i++ {
+		fast = fast.Next
+	}
 
-	for slow != nil {
+	var pre *SingleLinkedList.ListNode
+	for fast != nil {
+		pre = slow
+		slow = slow.Next
+		fast = fast.Next
+	}
 
-		if fast == nil || fast.Next == nil {
-			if m-k == n {
-				if slow.Next == nil {
-					pre.Next = nil
-				} else {
-					slow.Next = slow.Next.Next
-				}
-				break
-			} else {
-				pre = slow
-				slow = slow.Next
-				k += 1
-			}
-		} else {
-			fast = fast.Next.Next
-			m += 2
-		}
+	if pre == nil {
+		head = slow.Next
+	} else {
+		pre.Next = slow.Next
 	}
 
 	return head
