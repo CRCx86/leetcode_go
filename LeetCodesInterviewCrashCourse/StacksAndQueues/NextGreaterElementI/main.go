@@ -11,7 +11,7 @@ func main() {
 	fmt.Println(nextGreaterElement([]int{1, 3, 5, 2, 4}, []int{6, 5, 4, 3, 2, 1, 7}))
 }
 
-// without stack's and queue's: не решена
+// не решена
 func nextGreaterElement(nums1 []int, nums2 []int) []int {
 
 	ans := make([]int, 0)
