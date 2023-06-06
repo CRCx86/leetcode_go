@@ -7,7 +7,7 @@ func main() {
 	//singleLinkedList.FillNums(1, 2, 3, 4, 5)
 	//removeNthFromEnd(singleLinkedList.Head, 2)
 	//singleLinkedList.FillNums(1)
-	//removeNthFromEnd(singleLinkedList.Head, 1)
+	//removeNthFromEnd2(singleLinkedList.Head, 1)
 	singleLinkedList.FillNums(1, 2)
 	removeNthFromEnd(singleLinkedList.Head, 2)
 }
