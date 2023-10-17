@@ -10,29 +10,30 @@ func main() {
 	fmt.Println(lengthOfLongestSubstring("pwwkew"))
 	fmt.Println(lengthOfLongestSubstring("au"))
 	fmt.Println(lengthOfLongestSubstring("aab"))
+	fmt.Println(lengthOfLongestSubstring("tmmzuxt"))
 
 }
 
 func lengthOfLongestSubstring(s string) int {
 
-	max := 0
 	left := 0
+	ans := 0
 	counts := make(map[uint8]int)
-
 	for right := 0; right < len(s); right++ {
 		counts[s[right]]++
-
 		for counts[s[right]] > 1 {
 			counts[s[left]]--
 			left++
 		}
-
-		ans := right - left + 1
-		if ans > max {
-			max = ans
-		}
-
+		ans = _max(ans, right-left+1)
 	}
 
-	return max
+	return ans
+}
+
+func _max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
