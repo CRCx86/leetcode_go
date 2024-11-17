@@ -3,10 +3,8 @@ package main
 import "fmt"
 
 func main() {
-
 	fmt.Println(countElements([]int{1, 2, 3}))
 	fmt.Println(countElements([]int{1, 1, 3, 3, 5, 5, 7, 7}))
-
 }
 
 func countElements(arr []int) int {
