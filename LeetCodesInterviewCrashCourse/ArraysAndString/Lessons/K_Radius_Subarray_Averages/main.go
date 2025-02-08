@@ -17,13 +17,13 @@ func getAverages(nums []int, k int) []int {
 	}
 
 	n := len(nums)
-	prefix := make([]int, n, n)
+	prefix := make([]int, n)
 	prefix[0] = nums[0]
 	for i := 1; i < n; i++ {
 		prefix[i] = prefix[i-1] + nums[i]
 	}
 
-	ans := make([]int, n, n)
+	ans := make([]int, n)
 
 	for i := 0; i < n; i++ {
 		if i-k == 0 && i+k < n {

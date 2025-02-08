@@ -1,9 +1,5 @@
 package main
 
-func main() {
-
-}
-
 func numSubarrayProductLessThanK(nums []int, k int) int {
 	if k <= 1 {
 		return 0
